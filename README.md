@@ -1,35 +1,30 @@
 ### Notice
-After completing our research, we will provide comprehensive code examples in this repository, including the training process and implementation of various methods, to ensure reproducibility and facilitate further exploration in the field
+After completing our research and publishing the paper, we will provide the complete code, including the training process and implementation of various methods, to ensure reproducibility and facilitate further exploration in the field.
+For now, we provide our model checkpoints and testing script here.
 
-# emotion-recognition
-Emotion recognition in text is a fundamental aspect of natural language understanding, 
-with significant applications in various domains
+## Goals
 
-## Applications
- - mental health monitoring
- - customer feedback analysis
- - content recommendation
- - chatbots
-
-## Emotions in our predictions
+### 1. Predicting All Emotions Existence:
+for each of the 6 classes, predict a binary label which means either the emotion is present in the given text or not. 
+The emotions we consider are:
  - Anger
  - Disgust
  - Fear
  - Sadness
  - Happiness
  - Surprise
- - Other
+
+### 2. Predicting the Primary Emotion within 7 classes:
+Predicting a single emotion that primarily represents the emotion of the given text within those 6 classes, along with an additional 'other' class for cases when the given text does not belong to one of those 6 classes.
 
 ## Datasets
  - EmoPars
  - ArmanEmo
 
-## Model Explanation
-Our approach for emotion recognition in text utilizes the powerful XLM-RoBERTa, which is a pre-trained transformer-based language model. We take advantage of its deep understanding of language by fine-tuning it on two diverse datasets: EmoPars and ArmanEmo. This allows our model to capture a wide range of emotions effectively.
-One key aspect of our approach is the incorporation of a single Gated Recurrent Unit (GRU) strategically placed before the final fully connected layer. This integration plays a crucial role in enhancing our model's ability to capture contextual dependencies within the text. By considering the sequential nature of the input, the GRU layer enables our model to better understand the emotional nuances present in the text.
-The result of this strategic integration is an improved F-score, which serves as a measure of the model's performance. By adding the GRU layer, our model demonstrates a significant enhancement in capturing intricate emotional patterns, resulting in a higher accuracy of emotion prediction.
+## Paper Abstract
+Emotion recognition in the text is a fundamental aspect of natural language understanding, with significant applications in various domains such as mental health monitoring, customer feedback analysis, content recommendation, and chatbots. In this paper, we present a hybrid model for predicting the presence of six emotions: anger, disgust, fear, sadness, happiness, and surprise. We also predict the primary emotion in the given text, including these emotions and the “other” category. Our approach involves using XLM-RoBERTa, the pre-trained transformer-based language model, and fine-tuning it on two diverse datasets: EmoPars and ArmanEmo. Central to our approach is the incorporation of a single Gated Recurrent Unit (GRU), Placed before the final fully connected layer. This strategic integration empowers our model to capture contextual dependencies more effectively, resulting in an improved F-score after adding the GRU layer. This enhanced model achieved a 2% improvement in the F-score metric on the ArmanEmo test set and a 7% improvement in the F-score metric for the six emotions presence task on the final test set of the ParsiAzma Emotion Recognition challenge.
 
-## How do the prediction
+## How to do the prediction
 ```
 AE_PATH = 'model_ae.pth'
 PE_PATH = 'model_pe.pt'
@@ -48,19 +43,34 @@ ae_prediction['primary_emotion'] = pe_prediction['primary_emotion']
 final_result.to_csv('final_result.csv')
 
 ```
-## Our results
-| Model Configuration                                | AV fscore | AE fscore | AE recall | AE precision | PE fscore | PE recall | PE precision |
+## Model Checkpoints Availability
+[model_ae](https://drive.google.com/file/d/1mnB7fNxlu-PD1MgCTSCCT_ki7fcX6X9v/view?usp=sharing)
+<br>
+[model_pe](https://drive.google.com/file/d/1zzm9voS2ILDeux8q32xNMv03pEqN2hkd/view?usp=drivesdk)
+
+
+## Results
+### 1. ParsiAzma competition final results
+### [link](https://challenges.parsiazma.ir/web/challenges/challenge-page/24/leaderboard/98)
+
+![Result Table](images/ParsiAzma-final-result.jpg)
+
+### Second Place. =)
+
+### 2. Our different model results on the ParsiAzma final test set 
+| Model Configuration                                | AV macro fscore | AE macro fscore | AE macro recall | AE macro precision | PE macro fscore | PE macro recall | PE macro precision |
 |----------------------------------------------------|-----------|-----------|-----------|-------------|-----------|-----------|-------------|
 | Fine-tuning XLM-RoBERTa (base) on EmoPars for AE prediction && Fine-tuning ParsBERT on ArmanEmo for PE prediction | 0.42      | 0.55      | 0.66      | 0.52        | 0.28      | 0.36      | 0.43        |
 | Fine-tuning XLM-RoBERTa (base) + GRU on EmoPars for AE prediction && Fine-tuning XLM-RoBERTa (base) on ArmanEmo for PE prediction | 0.46      | 0.59      | 0.86      | 0.49        | 0.33      | 0.39      | 0.47        |
 | Fine-tuning XLM-RoBERTa (large) + GRU on EmoPars for AE prediction && fine-tuning XLM-RoBERTa (large) + GRU on ArmanEmo for PE prediction| 0.49      | 0.62      | 0.73      | 0.58        | 0.35      | 0.41      | 0.47        |
-| Fine-tuning XLM-RoBERTa (large) + GRU on EmoPars for AE prediction && Fine-tuning XLM-RoBERTa (large) on ArmanEmo for PE prediction| 0.50      | 0.62      | 0.73      | 0.58        | 0.37      | 0.42      | 0.49        |
-
+| Fine-tuning XLM-RoBERTa (large) + GRU on EmoPars for AE prediction && Fine-tuning XLM-RoBERTa (large) on ArmanEmo for PE prediction| **0.50**      | **0.62**      | **0.73**      | **0.58**        | **0.37**      | **0.42**      | **0.49**        |
 
 
 ## Acknowledgements
 
-We would like to express our gratitude to the creators and contributors of the ArmanEmo and EmoPars datasets for their valuable work and making their datasets publicly available for research purposes. We acknowledge their efforts in collecting and annotating the data, which greatly contributed to the development of our model. 
+We would like to express our gratitude to the creators and contributors of the ArmanEmo and EmoPars datasets for their valuable work and for making their datasets publicly available for research purposes. We acknowledge their efforts in collecting and annotating the data, which greatly contributed to the development of our model.
 
 - ArmanEmo Dataset: [Link to ArmanEmo Dataset](https://github.com/arman-rayan-sharif/arman-text-emotion)
 - EmoPars Dataset: [Link to EmoPars Dataset](https://github.com/nazaninsbr/Persian-Emotion-Detection)
+
+We also thank the organizers of the ParsiAzma National Competition for providing the opportunity to conduct this research. Their dedication to advancing the field of emotion recognition has been a driving force behind our project.
