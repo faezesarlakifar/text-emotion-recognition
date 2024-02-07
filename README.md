@@ -71,4 +71,4 @@ We would like to express our gratitude to the creators and contributors of the A
 - ArmanEmo Dataset: [Link](https://github.com/arman-rayan-sharif/arman-text-emotion)
 - EmoPars Dataset: [Link](https://github.com/nazaninsbr/Persian-Emotion-Detection)
 
-We also thank the organizers of the ParsiAzma National Competition for providing the opportunity to conduct this research. Their dedication to advancing the field of emotion recognition has been a driving force behind our project.
+We also thank the organizers of the ParsiAzma National Competition for providing the opportunity to conduct this research. Their dedication to studying and working in the field of emotion recognition has been a driving force behind our project.
