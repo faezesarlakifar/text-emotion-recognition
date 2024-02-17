@@ -51,7 +51,7 @@ final_result.to_csv('final_result.csv')
 
 ## Results
 ### 1. ParsiAzma competition final results
-### [link](https://challenges.parsiazma.ir/web/challenges/challenge-page/24/leaderboard/98)
+### [link](https://parsiazma.ir/)
 ### 🏆 Second Place. =)
 ![Result Table](images/ParsiAzma-final-result.jpg)
 
