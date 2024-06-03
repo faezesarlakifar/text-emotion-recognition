@@ -48,10 +48,7 @@ final_result.to_csv('final_result.csv')
 
 ```
 ## Model Checkpoints Availability
-[model_ae](https://drive.google.com/file/d/1mnB7fNxlu-PD1MgCTSCCT_ki7fcX6X9v/view?usp=sharing)
-<br>
-[model_pe](https://drive.google.com/file/d/1zzm9voS2ILDeux8q32xNMv03pEqN2hkd/view?usp=drivesdk)
-
+TODO: It will be available on Huggingface soon.
 
 ## Results
 ### 1. ParsiAzma competition final results
