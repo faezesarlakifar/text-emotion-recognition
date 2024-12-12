@@ -58,6 +58,7 @@ We want to thank the organizers of the ParsiAzma National Competition for provid
 
 ## Citation:
 If you find our work valuable and it contributes to your research or projects, we kindly request that you use the following citation:
+```
 @ARTICLE{Shamsfard, 
 author = {Sarlakifar, Faezeh and Mahdavi Mortazavi, Morteza and Shamsfard, Mehrnoush},  
 title = {EmoRecBiGRU: Emotion Recognition in Persian Tweets with a Transformer-based Model, Enhanced by Bidirectional GRU}, 
@@ -68,3 +69,4 @@ eprint = {http://journal.itrc.ac.ir/article-1-653-en.pdf},
 journal = {International Journal of Information and Communication Technology Research},   
 year = {2024}  
 }
+```
