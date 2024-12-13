@@ -25,7 +25,22 @@ The utilized dataset for this study includes two publicly available Datasets:
 <img src="https://github.com/faezesarlakifar/text-emotion-recognition/assets/63340593/dac0da99-fb4d-44a0-9a42-82f3bb545a25"
  alt="final model architecture" width="608" height="390">
 
-## How to do the prediction
+## Hugging Face Model
+
+### Model Checkpoints Availability
+We have made our pre-trained model checkpoints available on Hugging Face. You can download the model checkpoints directly from the following links:
+- [model_ae.pth](https://huggingface.co/sfaezella/Persian-EmoRoBERTa-BiGRU/resolve/main/model_ae.pth): The AE model checkpoint for All Emotion existence prediction.
+- [model_pe.pt](https://huggingface.co/sfaezella/Persian-EmoRoBERTa-BiGRU/resolve/main/model_pe.pt): The PE model checkpoint for Primary Emotion recognition.
+
+### Hugging Face Badge
+
+To quickly access the model page, click the badge below:
+
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Model-green)](https://huggingface.co/sfaezella/Persian-EmoRoBERTa-BiGRU)
+
+These models are ready for inference and easily loaded into your code.
+
+## How to Make Predictions
 ```
 AE_PATH = 'model_ae.pth'
 PE_PATH = 'model_pe.pt'
@@ -44,8 +59,6 @@ ae_prediction['primary_emotion'] = pe_prediction['primary_emotion']
 final_result.to_csv('final_result.csv')
 
 ```
-## Model Checkpoints Availability
-TODO: It will be available on Huggingface soon.
 
 ## Results
 ### 1. ParsiAzma competition final results
@@ -59,7 +72,7 @@ We want to thank the organizers of the ParsiAzma National Competition for provid
 ## Citation:
 If you find our work valuable and it contributes to your research or projects, we kindly request that you use the following citation:
 ```
-@ARTICLE{Shamsfard, 
+@ARTICLE{EmoRecBiGRU, 
 author = {Sarlakifar, Faezeh and Mahdavi Mortazavi, Morteza and Shamsfard, Mehrnoush},  
 title = {EmoRecBiGRU: Emotion Recognition in Persian Tweets with a Transformer-based Model, Enhanced by Bidirectional GRU}, 
 volume = {16}, 
