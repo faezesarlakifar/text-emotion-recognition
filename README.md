@@ -1,4 +1,5 @@
 [![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.61186/itrc/16.3.35-red)](http://dx.doi.org/10.61186/itrc.16.3.35)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
 
 <h1 align="center">
   EmoRecBiGRU
