@@ -1,10 +1,19 @@
+[![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.61186/itrc/16.3.35-red)](http://dx.doi.org/10.61186/itrc.16.3.35)
+
+<h1 align="center">
+  EmoRecBiGRU
+</h1>
+<h2 align="center">
+  Emotion Recognition in Persian Tweets with a Transformer-based Model, Enhanced by Bidirectional GRU
+</h2>
+
 ## Abstract
-Emotion recognition in text is a fundamental aspect of natural language understanding, with significant applications in various domains such as mental health monitoring, customer feedback analysis, content recommendation systems, and chatbots. In this paper, we present a hybrid model for predicting the presence of six emotions: anger, disgust, fear, sadness, happiness, and surprise in Persian text. We also predict the primary emotion in the given text, including these six emotions and the “other” category. Our approach involves the utilization of XLM-RoBERTa, a pre-trained transformer-based language model, and fine-tuning it on two diverse datasets: EmoPars and ArmanEmo. Central to our approach is incorporating a single Bidirectional Gated Recurrent Unit (BiGRU), placed before the final fully connected layer. This strategic integration empowers our model to capture contextual dependencies more effectively, resulting in an improved F-score after adding this BiGRU layer. This enhanced model achieved a 2% improvement in the F-score metric on the ArmanEmo test set and a 7% improvement in the F-score metric for predicting the presence of six emotions on the final test set of the ParsiAzma Emotion Recognition competition.
+Emotion recognition in text is a fundamental aspect of natural language understanding, with significant applications in various domains such as mental health monitoring, customer feedback analysis, content recommendation systems, and chatbots. In this paper, we present a hybrid model for predicting the presence of six emotions: anger, disgust, fear, sadness, happiness, and surprise in Persian text. We also predict the primary emotion in the given text, including these six emotions and the “other” category. Our approach involves the utilization of XLM-RoBERTa, a pre-trained transformer-based language model, and fine-tuning it on two diverse datasets: EmoPars and ArmanEmo. Central to our approach is the incorporation of a single Bidirectional Gated Recurrent Unit (BiGRU), placed before the final fully connected layer. This strategic integration enables our model to capture contextual dependencies more effectively, resulting in an improved F-score after incorporating the BiGRU layer. This enhanced model achieved a 2% improvement in the F-score metric on the ArmanEmo test set and a 7% improvement in the F-score metric for predicting the presence of six emotions on the final test set of the ParsiAzma Emotion Recognition competition.
 
 ## Goals
 
-### 1. Predicting All Emotions Existence:
-for each of the 6 classes, predict a binary label, meaning either the emotion is present in the given text or not. 
+### 1. Predicting the Existence of All Emotions:
+For each of the 6 classes, predict a binary label, meaning either the emotion is present in the given text or not. 
 The emotions we consider are:
  - Anger
  - Disgust
@@ -77,8 +86,6 @@ author = {Sarlakifar, Faezeh and Mahdavi Mortazavi, Morteza and Shamsfard, Mehrn
 title = {EmoRecBiGRU: Emotion Recognition in Persian Tweets with a Transformer-based Model, Enhanced by Bidirectional GRU}, 
 volume = {16}, 
 number = {3},  
-URL = {http://journal.itrc.ac.ir/article-1-653-en.html},  
-eprint = {http://journal.itrc.ac.ir/article-1-653-en.pdf},  
 journal = {International Journal of Information and Communication Technology Research},   
 year = {2024}  
 }
