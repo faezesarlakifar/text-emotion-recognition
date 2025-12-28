@@ -1,0 +1,21 @@
+import torch
+EMOPARS_TRAIN_PATH = 'final_datasets/emopars_train.csv'
+EMOPARS_TEST_PATH = 'final_datasets/emopars_test.csv'
+MODEL_NAME = 'HooshVareLab/bert-base-parsbert-uncased'
+MAX_LENGTH = 128
+LABEL_DICT_MAPPING = {'SAD': 0, 'HAPPY': 1,'SURPRISE': 2, 'FEAR': 3, 'HATE': 4, 'ANGRY': 5,'OTHER': 6,}
+LEARNING_RATE = 1e-5
+BATCH_SIZE = 4
+HIDDEN_SIZE = 768
+NUM_EPOCHS = 5
+RANDOM_STATE = 42
+EMOTIONS = ['Anger','Fear','Happiness','Hatred','Sadness','Wonder']
+COLUMN_NAMES = ['text','emotion']
+EMOPARS_THRESHOLD = 0.35
+TEST_SIZE = 0.1
+CHECKPOINT_PATH = 'parameters/model.pth'
+LOG_FILE_PATH = 'logs/log1.log'
+DEVICE = torch.device('cuda:0')
+LOSS_FUNCTION = torch.nn.CrossEntropyLoss()
+NUM_LABELS = 6
+MULTILABEL_TRAINING = True
