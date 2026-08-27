@@ -1,4 +1,4 @@
-[![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.61186/itrc/16.3.35-red)](http://dx.doi.org/10.61186/itrc.16.3.35)
+[![AllerTrans](https://img.shields.io/badge/Publication-DOI:10.61186/itrc/16.3.35-red)](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IxblITwAAAAJ&citation_for_view=IxblITwAAAAJ:u5HHmVD_uO8C)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
 
 <h1 align="center">
